@@ -1,0 +1,70 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>E-Commerce</title>
+    <link rel="stylesheet"href="{% static 'style.css' %}">
+    <link rel="stylesheet"href="{% static 'pincode.css' %}">
+    
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+
+
+    <!-------Google Font Import---------------->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@600&display=swap" rel="stylesheet">
+
+ <link rel="icon" href="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRfeI7nqscy0C0huUxO74Xd3MuSLxl-79SAzQ&usqp=CAU">
+</head>
+<body>
+    
+       
+    <nav>
+        <input type="checkbox" id="check">
+        <label for="check" class="checkbtn">
+            <i class="fa fa-bars"></i>
+        </label>
+        <!-- <img src="HECTAGONLOGO.png" class="logo"> -->
+       <a href="/"><label class="logo fnt-1">E-Commerce</label></a>
+
+    
+
+        <ul id="navbar">
+            <li><a class="a active" href="/">Home</a></li>
+            <li><a class="a"  href="/products">All Products</a></li>
+            <li><a href="/cart" class="a">Cart</a></li>
+            <li><a href="/contact" class="a" >Contact us</a></li>
+
+        </ul>
+    </nav>
+
+    <div class="pin-row">
+        <div class="pin-col">
+            <img src="https://i.ytimg.com/vi/rx9ezdmAsWQ/maxresdefault.jpg" class="w">
+        </div>
+        <div class="pin-col">
+            <div class="search-div lft">
+                &nbsp;&nbsp;&nbsp;&nbsp;<input id='srch' class="search-bar lft" placeholder="  Confirm Pincode.........">
+                <a id='atag' onclick="datapass()" href="" class="srch-btn"><i class="fa fa-arrow-right"></i></a>
+             </div>
+            
+        </div>
+
+    </div>
+    <br><br><br><br><br><br><br><br><br><br><br><br>
+    
+    
+
+    {% include 'footer.html' %}
+
+    {% block content %}
+
+    {% endblock %} 
+       
+</body>
+
+
+</html>

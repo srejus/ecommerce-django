@@ -1,0 +1,99 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>E-Commerce</title>
+    <!-- <link rel="stylesheet"href="{% static 'style.css' %}"> -->
+    <link rel="stylesheet"href="{%static 'style.css'%}">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+
+
+    <!-------Google Font Import---------------->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@600&display=swap" rel="stylesheet">
+
+ <link rel="icon" href="https://i.pinimg.com/originals/66/f7/72/66f77296282b5ab7c2780724802614c0.png">
+</head>
+<body>
+    
+    <nav>
+        <input type="checkbox" id="check">
+        <label for="check" class="checkbtn">
+            <i class="fa fa-bars"></i>
+        </label>
+        <!-- <img src="HECTAGONLOGO.png" class="logo"> -->
+       <a href="/"><label class="logo fnt-1">E-Commerce</label></a>
+
+    
+
+        <ul id="navbar">
+            <li><a class="a active" href="/">Home</a></li>
+            <li><a class="a"  href="/products">All Products</a></li>
+            <li><a href="/cart" class="a">Cart</a></li>
+            <li><a href="/contact" class="a" >Contact us</a></li>
+
+        </ul>
+    </nav>
+   
+ <div class="search-div">
+    <input id='srch' class="search-bar" placeholder="     Search products.........">
+    <a id='atag' onclick="datapass()" href="" class="srch-btn"><i class="fa fa-search"></i></a>
+ </div>
+ <script>
+     function datapass(){
+         let x=document.getElementById('srch').value;
+         document.getElementById('atag').href="/search/"+x;
+     }
+ </script>
+    <div class="main">
+        <a class="x" href="/products/3">
+            <img src="https://i.pinimg.com/736x/bd/55/48/bd55489ca21c416094d02ed25d2f8988.jpg" class="banner">
+        </a>
+    </div>
+    <div class="main1">
+        <h2 class="side-head">Featured Products</h2>
+        <div class="card-div">
+            {% for i in featured %}
+            <div class="card">
+                <img src="{{i.ImgCDN}}" class="product-image">
+                <div class="item-name">
+                    <p class="side-head sm">{{i.Item}}</p>
+                </div>
+               <a href="/products/{{i.id}}"><button class="sec-btn">View</button></a>
+            </div>
+            {% endfor %}
+        </div>
+    </div>
+   
+   <style>
+       .x{
+           width: 100%;
+       }
+       a{
+           text-decoration: none;
+           color: white;
+       }
+       .fa{
+           color: black;
+
+       }
+       .x{
+           color: white;
+       }
+   </style>
+  
+    </div>
+    {% include 'footer.html' %}
+
+    {% block content %}
+
+    {% endblock %} 
+  
+</body>
+
+
+</html>

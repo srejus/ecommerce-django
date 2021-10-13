@@ -1,0 +1,141 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>E-Commerce</title>
+    <link rel="stylesheet"href="{% static 'style.css' %}">
+
+     <!-- <link rel="stylesheet"href="style1.css"> -->
+     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+
+</head>
+<body>
+
+    <div class="myfooter">
+        <div class="footer-div">
+            <div class="row">
+                <i class="fa fa-map-marker f"></i>
+                <h6 class="side-head w sm">2nd Floor Newindia Kerala<br>67545</h6>
+            </div>
+           
+            <div class="row">
+                <i class="fa fa-phone f"></i>
+                <h6 class="side-head w sm">+91 900000000</h6>
+            </div>
+
+            <div class="row">
+                <i class="fa fa-envelope f"></i>
+                <h6 class="side-head w sm ">support@company.com</h6>
+            </div>
+           
+        </div>
+
+        <div class="footer-div">
+            
+                <h6 class="side-head w">   About Company</h6>
+                <p class="side-head w">Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book.
+                </p>
+                <div class="row mb">
+                    <a href="#">
+                        <i class="fa fa-facebook-square f"></i>
+                    </a>&nbsp;&nbsp;&nbsp;
+                    <a href="#">
+                        <i class="fa fa-instagram f"></i>
+                    </a>&nbsp;&nbsp;&nbsp;
+                    <a href="#">
+                        <i class="fa fa-twitter-square f"></i>
+                    </a>&nbsp;&nbsp;&nbsp;
+                    
+                    <br><br><br>
+                </div>
+                
+            </div>
+            
+
+    </div>
+    <div class="credits">
+        <br>
+        <a class="side-head sm w" href="https://hectagon.co.in/">Designed & Developed By Hectagon Technologies</h6>
+    </div>
+
+    <style>
+        .credits{
+            background-color:black;
+            width: 70%; 
+            padding-left: 30%;
+            padding-bottom: 40px;
+            margin-bottom: -30px;
+            margin-top: -30px;
+        }
+        .f{
+            color: white;
+            font-size: 30px;
+            margin-top: 50px;
+        }
+        .myfooter{
+            width: 100%;
+            background-color: black;
+            color: white;
+            display: flex;
+            flex-direction: row;
+        }
+        .footer-div{
+            display: flex;
+            flex-direction: column;
+            width: 50%;
+            margin-left: 50px;
+        }
+        .w{
+            color: white;
+            margin-top:30px;
+            margin-left:10px;
+            font-size: 15px;
+        }
+        .row{
+            display: flex;
+            flex-direction: row;
+            margin-top: 15px ;
+        
+        }
+        .e{
+            display: flex;
+            justify-content: flex-end;
+            
+        }
+        .mb{
+            margin-bottom: 30px;
+        }
+        @media(max-width:852px){
+            .myfooter{
+                width: 100%;
+                background-color: black;
+                color: white;
+                display: flex;
+                flex-wrap: wrap;
+                flex-direction: row;
+            }
+            .footer-div{
+                display: flex;
+                flex-direction: column;
+                flex-wrap: wrap;
+                width: 100%;
+                margin-left: 50px;
+        }
+        .credits{
+            background-color:black;
+            width: 90%; 
+            padding-left: 10%;
+            padding-bottom: 40px;
+            margin-bottom: -30px;
+            margin-top: -30px;
+        }
+
+        }
+        
+    </style>
+    
+</body>
+</html>
