@@ -1,4 +1,5 @@
-# ecommerce-django
-
-simple ecommerce website made with Python Django.
-
+{
+  "message": "Not Found",
+  "documentation_url": "https://docs.github.com/rest",
+  "status": "404"
+}
